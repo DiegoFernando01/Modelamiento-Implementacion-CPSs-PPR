@@ -2,7 +2,7 @@
 
 include "globals.mzn";
 
-% Definición del arreglo de variables
+% Definición del arreglo de variables y su dominio
 set of int: rango = 1..9;
 array[rango, rango] of var rango: cuadricula;
 
@@ -24,8 +24,10 @@ constraint
 % Restricciones para especificar condiciones iniciales
 constraint cuadricula[1,1] = 5;
 constraint cuadricula[1,2] = 3;
-constraint cuadricula[1,5] = 7;
 constraint cuadricula[9,1] = 6;
 constraint cuadricula[9,7] = 8;
 
-solve satisfy;
+% Aplicación de las soluciones
+
+%solve satisfy;
+solve :: int_search([cuadricula[i, j] | i in 1..9, j in 1..9], first_fail, indomain_min, complete) satisfy;
