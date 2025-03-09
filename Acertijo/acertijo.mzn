@@ -34,3 +34,10 @@ constraint generosM[Dario] != Jazz;
 
 % Aplicación de las soluciones
 solve satisfy;
+
+% Formato de salida.
+output [
+  "Nombre: Juan, Apellido: ", show(apellidos[Juan]), ", Edad: ", show(edades[Juan]), ", Música: ", show(generosM[Juan]), "\n",
+  "Nombre: Oscar, Apellido: ", show(apellidos[Oscar]), ", Edad: ", show(edades[Oscar]), ", Música: ", show(generosM[Oscar]), "\n",
+  "Nombre: Darío, Apellido: ", show(apellidos[Dario]), ", Edad: ", show(edades[Dario]), ", Música: ", show(generosM[Dario]), "\n"
+];
