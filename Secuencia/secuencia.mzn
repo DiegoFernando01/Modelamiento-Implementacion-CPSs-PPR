@@ -1,7 +1,7 @@
 % Solución problema 2.3 - Secuencia mágica
 
 % Definición de variables y dominios
-int: n = 4; % longitud de la secuencia
+int: n = 20; % longitud de la secuencia
 array[0..n-1] of var 0..n-1: x;
 
 % Restricción principal
@@ -16,7 +16,10 @@ constraint sum(x) = n;
 constraint sum(i in 0..n-1)( (i - 1) * x[i] ) = 0;
 
 % Aplicación de las soluciones
-solve satisfy;
+%solve satisfy;
+%solve :: int_search(x, first_fail, indomain_min, complete) satisfy;
+%solve :: int_search(x, input_order, indomain_max, complete) satisfy;
+solve :: int_search(x, first_fail, indomain_random, complete) satisfy;
 
 % Formato de salida
 output ["Secuencia mágica: ", show(x)];
