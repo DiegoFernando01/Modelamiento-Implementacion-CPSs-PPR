@@ -16,10 +16,15 @@ constraint sum(x) = n;
 constraint sum(i in 0..n-1)( (i - 1) * x[i] ) = 0;
 
 % Aplicación de las soluciones
-%solve satisfy;
+solve satisfy;
 %solve :: int_search(x, first_fail, indomain_min, complete) satisfy;
 %solve :: int_search(x, input_order, indomain_max, complete) satisfy;
-solve :: int_search(x, first_fail, indomain_random, complete) satisfy;
+%solve :: int_search(x, first_fail, indomain_random, complete) satisfy;
 
 % Formato de salida
-output ["Secuencia mágica: ", show(x)];
+output [
+  "Secuencia mágica: " ++ show(x) ++ "\n",
+  "Frecuencias:\n",
+  concat([ "El número " ++ show(i) ++ " aparece " 
+           ++ show(sum([ bool2int(x[j] == i) | j in 0..n-1 ]))
+           ++ " veces.\n" | i in 0..n-1])];
