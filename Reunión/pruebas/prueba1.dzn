@@ -1,0 +1,17 @@
+% Ejemplo basado en el enunciado del problema:
+%  personas = ["jose", "julian", "diana", "juan", "david", "claudia", "edgar", "mario"]
+%  next = [|5,8|] --> la persona 5 (david) debe estar junto a la persona 8 (mario)
+%  separate = [|6,7|] --> la persona 6 (claudia) debe estar separada de la persona 7 (edgar)
+%  distance = [|6,5,2|] --> la persona 6 (claudia) y la persona 5 (david) deben estar separadas como máximo por 2 personas
+
+num_personas = 8;
+personas = ["jose", "julian", "diana", "juan", "david", "claudia", "edgar", "mario"];
+
+num_adyacentes = 1;
+adyacentes = array2d(1..num_adyacentes, 1..2, [5, 8]);
+
+num_separadas = 1;
+separadas = array2d(1..num_separadas, 1..2, [6, 7]);
+
+num_distancias = 1;
+distancias = array2d(1..num_distancias, 1..3, [6, 5, 2]);
