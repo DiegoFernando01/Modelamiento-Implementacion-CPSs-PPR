@@ -45,9 +45,27 @@ constraint
 constraint posicion[1] = 1;
 
 % Estrategias de búsqueda
+
+% Opción 1: first_fail + indomain_min
 solve :: int_search(posicion, first_fail, indomain_min, complete) satisfy;
+
+% Opción 2: input_order + indomain_random
+% solve :: int_search(posicion, input_order, indomain_random, complete) satisfy;
+
+% Opción 3: most_constrained + indomain_max
+% solve :: int_search(posicion, most_constrained, indomain_max, complete) satisfy;
+
+% Opción 4: secuencia de búsqueda (para ampliación futura)
+% solve :: seq_search([
+%   int_search(posicion, first_fail, indomain_min, complete)
+% ]) satisfy;
 
 % Impresión en consola
 output [
-  "Orden de personas en la fila:\n",
-  concat([ "Posición " ++ show(posicion[i]) ++ ": " ++ personas[i] ++ "\n" | i in 1..num_personas])];
+  "Orden de personas en la fila:\n"
+] ++
+[
+  "Posición " ++ show(i) ++ ": " ++ personas[j] ++ "\n"
+  | i in 1..num_personas,
+    j in 1..num_personas where fix(posicion[j]) == i
+];

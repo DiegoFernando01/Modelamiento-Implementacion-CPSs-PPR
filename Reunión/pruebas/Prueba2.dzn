@@ -1,0 +1,20 @@
+num_personas = 10;
+personas = ["ana", "bruno", "carla", "diego", "elena", "felipe", "gabriela", "hector", "ines", "javier"];
+
+num_adyacentes = 2;
+adyacentes = array2d(1..num_adyacentes, 1..2, [
+  3, 5,  % carla y elena deben estar juntas
+  7, 10  % gabriela y javier deben estar juntas
+]);
+
+num_separadas = 2;
+separadas = array2d(1..num_separadas, 1..2, [
+  2, 6,  % bruno y felipe no deben estar juntos
+  4, 9  % diego e ines no deben estar juntos
+]);
+
+num_distancias = 2;
+distancias = array2d(1..num_distancias, 1..3, [
+  1, 8, 3,  % ana y hector deben estar máximo a 3 personas
+  6, 9, 2  % felipe e ines deben estar máximo a 2 personas
+]);

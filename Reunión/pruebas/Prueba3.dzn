@@ -1,0 +1,23 @@
+num_personas = 12;
+personas = ["alicia", "bernardo", "camila", "daniel", "ernesto", "fatima", "gaston", "helena", "ismael", "josefa", "kevin", "lucia"];
+
+num_adyacentes = 3;
+adyacentes = array2d(1..num_adyacentes, 1..2, [
+  2, 4,  % bernardo y daniel juntos
+  3, 7,  % camila y gaston juntos
+  9, 11  % ismael y kevin juntos
+]);
+
+num_separadas = 3;
+separadas = array2d(1..num_separadas, 1..2, [
+  1, 12,  % alicia y lucia no juntas
+  5, 10, % ernesto y josefa no juntas
+  6, 8  % fatima y helena no juntas
+]);
+
+num_distancias = 3;
+distancias = array2d(1..num_distancias, 1..3, [
+  3, 5, 2,  % camila y ernesto máx 2 de distancia
+  6, 9, 1,  % fatima e ismael máx 1 de distancia
+  8, 12, 3  % helena y lucia máx 3 de distancia
+]);
