@@ -32,8 +32,26 @@ constraint edades[Oscar] == 25;
 % Implementación pista 4: La música favorita de Darío no es el Jazz
 constraint generosM[Dario] != Jazz;
 
-% Aplicación de las soluciones
+% Estrategias de búsqueda
+
+% Opción 0: (Por defecto)
 solve satisfy;
+
+% Opción 1: Enfocarse en edades
+% solve :: int_search(edades, first_fail, indomain_min, complete) satisfy;
+
+% Opción 2: Asignación aleatoria de apellidos
+% solve :: int_search([apellidos[n] | n in listaNombres], input_order, indomain_random, complete) satisfy;
+
+% Opción 3: Asignación de géneros musicales
+% solve :: int_search([generosM[n] | n in listaNombres], first_fail, indomain_max, complete) satisfy;
+
+% Opción 4: Combinada
+% solve :: seq_search([
+%   int_search(edades, first_fail, indomain_min, complete),
+%   int_search([apellidos[n] | n in listaNombres], input_order, indomain_min, complete),
+%   int_search([generosM[n] | n in listaNombres], input_order, indomain_min, complete)
+% ]) satisfy;
 
 % Formato de salida.
 output [
