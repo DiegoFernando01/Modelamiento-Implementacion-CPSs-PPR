@@ -43,7 +43,21 @@ constraint
   if restricciones[1,1] = 0 then cuadricula[1,1] = 1 else true endif;
 
 % Estrategias de búsqueda
+
+% Opción 0:
+% solve satisfy;
+
+% Opción 1: first_fail con indomain_min (estrategia predeterminada)
 solve :: int_search([cuadricula[i, j] | i in rango, j in rango], first_fail, indomain_min, complete) satisfy;
+
+% Opción 2: first_fail con indomain_random
+% solve :: int_search([cuadricula[i, j] | i in rango, j in rango], first_fail, indomain_random, complete) satisfy;
+
+% Opción 3: first_fail con indomain_split (divide el dominio en dos partes)
+% solve :: int_search([cuadricula[i, j] | i in rango, j in rango], first_fail, indomain_split, complete) satisfy;
+
+% Opción 4: input_order con indomain_min (procesa las variables en orden de declaración)
+% solve :: int_search([cuadricula[i, j] | i in rango, j in rango], input_order, indomain_min, complete) satisfy;
 
 % Impresión en consola
 output [show([cuadricula[i,j]| j in rango]) ++ "\n"| i in rango];
