@@ -44,7 +44,7 @@ constraint
 % Estrategias de búsqueda
 
 % Opción 1: first_fail con indomain_min (estrategia por defecto)
-solve :: int_search(cel, first_fail, indomain_min, complete) satisfy;
+% solve :: int_search(cel, first_fail, indomain_min, complete) satisfy;
 
 % Opción 2: first_fail con indomain_random
 % solve :: int_search(cel, first_fail, indomain_random, complete) satisfy;
@@ -52,8 +52,8 @@ solve :: int_search(cel, first_fail, indomain_min, complete) satisfy;
 % Opción 3: first_fail con indomain_split
 % solve :: int_search(cel, first_fail, indomain_split, complete) satisfy;
 
-% Opción 4: input_order con indomain_min
-% solve :: int_search(cel, input_order, indomain_min, complete) satisfy;
+% Opción 4: input_order con indomain_min (estrategia más óptima probada)
+solve :: int_search(cel, input_order, indomain_min, complete) satisfy;
 
 % Salida
 output [

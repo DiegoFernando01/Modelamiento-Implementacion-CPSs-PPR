@@ -18,10 +18,10 @@ constraint sum(i in 0..n-1)( (i - 1) * x[i] ) = 0;
 % Estrategias de búsqueda:
 
 % Opción 1: first_fail + indomain_min
-solve :: int_search(x, first_fail, indomain_min, complete) satisfy;
+%solve :: int_search(x, first_fail, indomain_min, complete) satisfy;
 
-% Opción 2: input_order + indomain_max
-% solve :: int_search(x, input_order, indomain_max, complete) satisfy;
+% Opción 2: input_order + indomain_max (estrategia más óptima probada)
+solve :: int_search(x, input_order, indomain_max, complete) satisfy;
 
 % Opción 3: first_fail + indomain_random
 % solve :: int_search(x, first_fail, indomain_random, complete) satisfy;

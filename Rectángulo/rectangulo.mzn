@@ -39,7 +39,7 @@ constraint posY[1] = 0;
 % Estrategias de búsqueda
 
 % Opción 1: first_fail + indomain_mi
-solve :: int_search(posX ++ posY, first_fail, indomain_min, complete) satisfy;
+% solve :: int_search(posX ++ posY, first_fail, indomain_min, complete) satisfy;
 
 % Opción 2: input_order + indomain_min
 % solve :: int_search(posX ++ posY, input_order, indomain_min, complete) satisfy;
@@ -47,8 +47,8 @@ solve :: int_search(posX ++ posY, first_fail, indomain_min, complete) satisfy;
 % Opción 3: input_order + indomain_random
 % solve :: int_search(posX ++ posY, input_order, indomain_random, complete) satisfy;
 
-% Opción 4: most_constrained + indomain_max
-% solve :: int_search(posX ++ posY, most_constrained, indomain_max, complete) satisfy;
+% Opción 4: most_constrained + indomain_max (opción más óptima)
+solve :: int_search(posX ++ posY, most_constrained, indomain_max, complete) satisfy;
 
 % Opción 5: combinación
 %solve :: seq_search([
