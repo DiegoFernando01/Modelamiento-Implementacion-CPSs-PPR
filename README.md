@@ -30,9 +30,9 @@ Este repositorio contiene la solución al taller #1 sobre modelamiento e impleme
 
 ## 📁 Contenido
 
-El informe completo se encuentra disponible en [Google Docs](https://docs.google.com/document/d/your-document-id/edit) con acceso exclusivo a correos de la Universidad del Valle. A continuación, enlaces a las secciones específicas:
+El informe completo se encuentra disponible en [Google Docs](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?usp=sharing) con acceso exclusivo a correos de la Universidad del Valle. A continuación, enlaces a las secciones específicas:
 
-1. [Introducción](https://docs.google.com/document/d/your-document-id/edit#heading=h.introduccion)
+1. [Introducción](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.introduccion)
 2. [Modelos Implementados](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.mxg7nek8hb4q)
    - [Acertijo](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.j2k89rhf6jjw)
    - [Kakuro](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.eiy8j6qnbbu2)
@@ -47,11 +47,11 @@ El informe completo se encuentra disponible en [Google Docs](https://docs.google
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/DiegoFernando01/Modelamiento-Implementacion-CPSs-PR.git
+   git clone https://github.com/DiegoFernando01/Modelamiento-Implementacion-CPSs-PPR.git
    ```
 2. Navegar al directorio del proyecto:
    ```bash
-   cd Modelamiento-Implementacion-CPSs-PR
+   cd Modelamiento-Implementacion-CPSs-PPR
    ```
 3. Para ejecutar los modelos, necesitarás tener instalado MiniZinc:
 
@@ -93,3 +93,8 @@ El informe completo se encuentra disponible en [Google Docs](https://docs.google
 Este proyecto está bajo la Licencia MIT.
 
 ---
+
+## 🔗 Enlaces importantes
+
+- **Repositorio GitHub:** [https://github.com/DiegoFernando01/Modelamiento-Implementacion-CPSs-PPR](https://github.com/DiegoFernando01/Modelamiento-Implementacion-CPSs-PPR)
+- **Informe completo:** [https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?usp=sharing](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?usp=sharing)
