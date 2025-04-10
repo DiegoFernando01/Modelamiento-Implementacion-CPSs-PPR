@@ -30,11 +30,16 @@ Este repositorio contiene la solución al taller #1 sobre modelamiento e impleme
 
 ## 📁 Contenido
 
-1. [Introducción](#)
-2. [Modelos Implementados](#)
-3. [Resultados](#)
-4. [Conclusiones](#)
-5. [Referencias](#)
+El informe completo se encuentra disponible en [Google Docs](https://docs.google.com/document/d/your-document-id/edit) con acceso exclusivo a correos de la Universidad del Valle. A continuación, enlaces a las secciones específicas:
+
+1. [Introducción](https://docs.google.com/document/d/your-document-id/edit#heading=h.introduccion)
+2. [Modelos Implementados](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.mxg7nek8hb4q)
+   - [Acertijo](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.j2k89rhf6jjw)
+   - [Kakuro](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.eiy8j6qnbbu2)
+   - [Rectángulo](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.7a11bglh5pi4)
+   - [Reunión](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.vf17hs3znsry)
+   - [Secuencia](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.30b7obe44v31)
+   - [Sudoku](https://docs.google.com/document/d/1m8O5nrGJ9o798lfLnqP-0JoZgPKfS0XeqfqHkS5DJfg/edit?tab=t.0#heading=h.cpggf1vf8fuo)
 
 ---
 
@@ -49,17 +54,20 @@ Este repositorio contiene la solución al taller #1 sobre modelamiento e impleme
    cd Modelamiento-Implementacion-CPSs-PR
    ```
 3. Para ejecutar los modelos, necesitarás tener instalado MiniZinc:
+
    - Puedes descargar MiniZinc desde [https://www.minizinc.org/software.html](https://www.minizinc.org/software.html)
 
 4. Ejecutar los modelos MiniZinc:
+
    - **Opción 1:** Abrir MiniZinc IDE
+
      - Inicia MiniZinc IDE
      - Selecciona File > Open y navega hasta el archivo .mzn que deseas ejecutar
      - Para modelos que tienen archivos de datos de prueba (archivos .dzn):
        - Selecciona el archivo .mzn (por ejemplo, `kakuro.mzn`)
        - En la opción "Open" del IDE, selecciona uno de los archivos .dzn de la carpeta Pruebas (por ejemplo, `Pruebas/Prueba1.dzn`)
      - Haz clic en "Run" para ejecutar el modelo
-   
+
    - **Opción 2:** Usar la línea de comandos
      - Para ejecutar un modelo sin archivo de datos externo
      ```bash
