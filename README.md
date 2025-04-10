@@ -48,6 +48,35 @@ Este repositorio contiene la solución al taller #1 sobre modelamiento e impleme
    ```bash
    cd Modelamiento-Implementacion-CPSs-PR
    ```
+3. Para ejecutar los modelos, necesitarás tener instalado MiniZinc:
+   - Puedes descargar MiniZinc desde [https://www.minizinc.org/software.html](https://www.minizinc.org/software.html)
+
+4. Ejecutar los modelos MiniZinc:
+   - **Opción 1:** Abrir MiniZinc IDE
+     - Inicia MiniZinc IDE
+     - Selecciona File > Open y navega hasta el archivo .mzn que deseas ejecutar
+     - Para modelos que tienen archivos de datos de prueba (archivos .dzn):
+       - Selecciona el archivo .mzn (por ejemplo, `kakuro.mzn`)
+       - En la opción "Open" del IDE, selecciona uno de los archivos .dzn de la carpeta Pruebas (por ejemplo, `Pruebas/Prueba1.dzn`)
+     - Haz clic en "Run" para ejecutar el modelo
+   
+   - **Opción 2:** Usar la línea de comandos
+     - Para ejecutar un modelo sin archivo de datos externo
+     ```bash
+     minizinc Acertijo/acertijo.mzn
+     ```
+     - Para ejecutar un modelo con un archivo de datos de prueba
+     ```bash
+     minizinc Kakuro/kakuro.mzn Kakuro/Pruebas/Prueba1.dzn
+     ```
+
+5. Los modelos disponibles son:
+   - `Acertijo/acertijo.mzn` - No requiere archivo de datos
+   - `Kakuro/kakuro.mzn` - Usa archivos en Kakuro/Pruebas/
+   - `Rectángulo/rectangulo.mzn` - Usa archivos en Rectángulo/Pruebas/
+   - `Reunión/reunion.mzn` - Usa archivos en Reunión/pruebas/
+   - `Secuencia/secuencia.mzn` - No requiere archivo de datos
+   - `Sudoku/sudoku.mzn` - Usa archivos en Sudoku/Pruebas/
 
 ---
 
